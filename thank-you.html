@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Equonytics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0E1512;
+            --surface: #17221B;
+            --surface-2: #1D2B22;
+            --border: rgba(237, 232, 222, 0.09);
+            --border-strong: rgba(237, 232, 222, 0.16);
+            --cream: #EDE8DD;
+            --cream-soft: #F5F1E6;
+            --muted: rgba(237, 232, 222, 0.62);
+            --faint: rgba(237, 232, 222, 0.36);
+            --forest: #3E7350;
+            --forest-deep: #2E5B3F;
+            --brass: #C79A4E;
+            --serif: 'Fraunces', Georgia, serif;
+            --sans: 'Inter', system-ui, sans-serif;
+            --mono: 'IBM Plex Mono', ui-monospace, monospace;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: var(--sans);
+            background: var(--bg);
+            background-image: radial-gradient(circle at 15% 10%, rgba(62,115,80,0.12), transparent 45%),
+                               radial-gradient(circle at 90% 85%, rgba(199,154,78,0.06), transparent 40%);
+            color: var(--cream);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 24px;
+            text-align: center;
+            line-height: 1.6;
+        }
+        .card {
+            background: var(--surface);
+            border-radius: 22px;
+            padding: 60px 44px;
+            max-width: 540px;
+            width: 100%;
+            border: 1px solid var(--border);
+            box-shadow: 0 22px 60px rgba(0, 0, 0, 0.45);
+        }
+        .logo-monogram {
+            width: 48px;
+            height: 48px;
+            border-radius: 11px;
+            background: var(--forest);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 22px;
+            font-family: var(--serif);
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--cream-soft);
+        }
+        .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.68rem;
+            font-weight: 500;
+            letter-spacing: 1.6px;
+            text-transform: uppercase;
+            color: var(--brass);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 14px;
+        }
+        .eyebrow::before { content: ''; width: 14px; height: 1px; background: var(--brass); display: inline-block; }
+        h1 {
+            font-family: var(--serif);
+            font-size: 2.1rem;
+            font-weight: 500;
+            margin-bottom: 14px;
+            letter-spacing: -0.3px;
+            color: var(--cream);
+        }
+        p {
+            color: var(--muted);
+            margin-bottom: 26px;
+            font-size: 0.95rem;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        a.btn {
+            display: inline-block;
+            background: var(--forest);
+            color: var(--cream-soft);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            padding: 13px 30px;
+            border-radius: 60px;
+            transition: background 0.2s;
+        }
+        a.btn:hover { background: var(--forest-deep); }
+        .note {
+            margin-top: 26px;
+            font-family: var(--mono);
+            font-size: 0.68rem;
+            color: var(--faint);
+            letter-spacing: 0.3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="logo-monogram">EQ</div>
+        <span class="eyebrow">Request received</span>
+        <h1>Thank you.</h1>
+        <p>Your assessment request is in hand. We read every one ourselves — expect a reply within one business day with next steps.</p>
+        <a href="index.html" class="btn">Return to homepage</a>
+        <div class="note">EQUONYTICS · RESEARCH TRIANGLE, NC</div>
+    </div>
+</body>
+</html>
