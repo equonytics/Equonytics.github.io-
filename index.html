@@ -175,16 +175,9 @@
             gap: 10px;
         }
         .logo-block { display: flex; align-items: center; gap: 12px; }
-        .logo-badge {
-            height: 46px;
-            width: auto;
-            display: block;
-            flex-shrink: 0;
-            border-radius: 8px;
-        }
-        .logo-text { display: flex; flex-direction: column; justify-content: center; gap: 4px; }
+        .logo-text { display: flex; flex-direction: column; justify-content: center; gap: 5px; }
         .logo-wordmark {
-            height: 24px;
+            height: 34px;
             width: auto;
             display: block;
         }
@@ -602,8 +595,7 @@
             padding-bottom: 34px; border-bottom: 1px solid var(--border); margin-bottom: 20px;
         }
         .footer-brand { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
-        .footer-badge { height: 40px; width: auto; display: block; border-radius: 7px; }
-        .footer-logo-img { height: 20px; width: auto; display: block; }
+        .footer-logo-img { height: 26px; width: auto; display: block; }
         .footer-desc { font-size: 0.82rem; color: var(--muted); max-width: 260px; margin-bottom: 10px; }
         .footer-loc { font-family: var(--mono); font-size: 0.66rem; color: var(--faint); }
         .fc h4 { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 1.6px; text-transform: uppercase; color: var(--brass); margin-bottom: 12px; }
@@ -637,8 +629,7 @@
             .service-options { grid-template-columns: repeat(2, 1fr); }
         }
         @media (max-width: 560px) {
-            .logo-badge { height: 38px; }
-            .logo-wordmark { height: 20px; }
+            .logo-wordmark { height: 26px; }
             .stages-inner { grid-template-columns: 1fr; }
             .stage { border-right: none; border-bottom: 1px solid var(--border); }
             .foot-inner { grid-template-columns: 1fr; }
@@ -656,7 +647,6 @@
     <nav>
         <div class="nav-inner">
             <a href="#" class="logo-block">
-                <img src="./assets/badge.png" alt="" class="logo-badge" aria-hidden="true">
                 <div class="logo-text">
                     <img src="./assets/logo.png" alt="Equonytics" class="logo-wordmark">
                     <span class="logo-sub">Help Building & Navigating your Data Streams</span>
@@ -1429,7 +1419,6 @@
         <div class="foot-inner">
             <div>
                 <div class="footer-brand">
-                    <img src="./assets/badge.png" alt="" class="footer-badge" aria-hidden="true">
                     <img src="./assets/logo.png" alt="Equonytics" class="footer-logo-img">
                 </div>
                 <p class="footer-desc">An independent analytics consultancy helping organizations move from clear reporting to confident decisions.</p>
