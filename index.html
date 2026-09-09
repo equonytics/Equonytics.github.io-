@@ -563,6 +563,38 @@
         }
         .cta-form input::placeholder { color: var(--faint); }
         .cta-form input:focus { border-color: var(--forest); }
+        .cta-form { flex-direction: column; align-items: stretch; max-width: 480px; }
+        .form-row { display: flex; gap: 10px; flex-wrap: wrap; }
+        .form-row input, .form-row select { flex: 1; min-width: 180px; }
+        .cta-form select {
+            padding: 13px 20px;
+            border-radius: var(--radius-pill);
+            border: 1px solid var(--border-strong);
+            background: var(--surface-2);
+            color: var(--cream);
+            font-family: var(--sans);
+            font-size: 0.9rem;
+            outline: none;
+            transition: border-color 0.2s;
+            cursor: pointer;
+        }
+        .cta-form select:invalid { color: var(--faint); }
+        .cta-form select:focus { border-color: var(--forest); }
+        .cta-form textarea {
+            padding: 13px 20px;
+            border-radius: 18px;
+            border: 1px solid var(--border-strong);
+            background: var(--surface-2);
+            color: var(--cream);
+            font-family: var(--sans);
+            font-size: 0.9rem;
+            outline: none;
+            resize: vertical;
+            transition: border-color 0.2s;
+        }
+        .cta-form textarea::placeholder { color: var(--faint); }
+        .cta-form textarea:focus { border-color: var(--forest); }
+        .cta-form button { width: 100%; padding: 13px 28px; }
         .cta-form button {
             background: var(--forest);
             border: none;
@@ -1399,7 +1431,38 @@
                     <form class="cta-form" id="assessment-form" action="https://formspree.io/f/xnparqle" method="POST">
                         <input type="hidden" name="_subject" value="Equonytics Assessment Request">
                         <input type="text" name="_gotcha" style="display:none">
-                        <input type="email" name="email" placeholder="you@yourorganization.com" aria-label="Email address" required pattern="[^@\s]+@[^@\s]+\.[^@\s]+">
+
+                        <div class="form-row">
+                            <input type="text" name="name" placeholder="Full name" aria-label="Full name" required>
+                            <input type="email" name="email" placeholder="Work email" aria-label="Work email" required pattern="[^@\s]+@[^@\s]+\.[^@\s]+">
+                        </div>
+
+                        <div class="form-row">
+                            <input type="text" name="company" placeholder="Company name" aria-label="Company name" required>
+                            <select name="employees" aria-label="Number of employees" required>
+                                <option value="" disabled selected>Company size</option>
+                                <option value="1-10">1–10 employees</option>
+                                <option value="11-50">11–50 employees</option>
+                                <option value="51-200">51–200 employees</option>
+                                <option value="201-500">201–500 employees</option>
+                                <option value="500+">500+ employees</option>
+                            </select>
+                        </div>
+
+                        <select name="industry" aria-label="Industry" required>
+                            <option value="" disabled selected>Industry</option>
+                            <option value="SaaS / Software">SaaS / Software</option>
+                            <option value="Ecommerce / Retail">Ecommerce / Retail</option>
+                            <option value="Manufacturing">Manufacturing</option>
+                            <option value="Logistics / Supply Chain">Logistics / Supply Chain</option>
+                            <option value="Financial Services">Financial Services</option>
+                            <option value="Healthcare">Healthcare</option>
+                            <option value="Professional Services">Professional Services</option>
+                            <option value="Other">Other</option>
+                        </select>
+
+                        <textarea name="challenge" placeholder="What's the biggest data challenge on your mind right now? (optional)" aria-label="Biggest data challenge" rows="3"></textarea>
+
                         <button type="submit">Request assessment</button>
                     </form>
                     <p class="cta-note">hello@equonytics.com</p>
