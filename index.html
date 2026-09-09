@@ -18,9 +18,9 @@
     <meta name="twitter:title" content="Equonytics | Data Science & Analytics Consulting, Built for Ownership">
     <meta name="twitter:description" content="Equonytics turns scattered data into clear, confident decisions — fractional analytics leadership, dashboards, forecasting, and AI integration, built with your team in as little as 90 days.">
 
-    <!-- FAVICONS: relative paths for GitHub Pages project site -->
-    <link rel="icon" type="image/png" href="assets/favicon.png">
-    <link rel="apple-touch-icon" href="assets/favicon.png">
+    <!-- FAVICONS: served from your repo instead of inline base64. Adjust paths to match your repo structure. -->
+    <link rel="icon" type="image/png" href="./assets/favicon.png">
+    <link rel="apple-touch-icon" href="./assets/favicon.png">
 
     <script type="application/ld+json">
     {
@@ -56,9 +56,6 @@
             --sage: #8CAA86;
             --brass: #C79A4E;
             --brass-deep: #A9782F;
-            /* LOGO IMAGES: relative paths for GitHub Pages project site */
-            --badge-img: url("assets/badge.png");
-            --logo-img: url("assets/logo.svg");
             --heading: 'Archivo Black', 'Archivo', system-ui, sans-serif;
             --sans: 'Inter', system-ui, sans-serif;
             --mono: 'IBM Plex Mono', ui-monospace, monospace;
@@ -177,12 +174,20 @@
             flex-wrap: wrap;
             gap: 10px;
         }
-        .logo-block { display: flex; align-items: center; gap: 10px; }
-        .brand-badge { background-image: var(--badge-img); background-size: contain; background-repeat: no-repeat; background-position: center; display: block; flex-shrink: 0; }
-        .logo-badge { width: 48px; height: 48px; }
-        .logo-text { display: flex; flex-direction: column; line-height: 1.2; gap: 3px; }
-        .brand-logo { background-image: var(--logo-img); background-size: contain; background-repeat: no-repeat; background-position: left center; display: block; }
-        .logo-wordmark { width: 160px; height: 28px; }
+        .logo-block { display: flex; align-items: center; gap: 12px; }
+        .logo-badge {
+            height: 46px;
+            width: auto;
+            display: block;
+            flex-shrink: 0;
+            border-radius: 8px;
+        }
+        .logo-text { display: flex; flex-direction: column; justify-content: center; gap: 4px; }
+        .logo-wordmark {
+            height: 24px;
+            width: auto;
+            display: block;
+        }
         .logo-sub { font-family: var(--mono); font-size: 0.6rem; color: var(--faint); letter-spacing: 0.4px; text-transform: uppercase; }
 
         .nav-links { display: flex; gap: 24px; list-style: none; }
@@ -596,9 +601,9 @@
             display: grid; grid-template-columns: 1.8fr 1fr 1fr 1fr; gap: 36px;
             padding-bottom: 34px; border-bottom: 1px solid var(--border); margin-bottom: 20px;
         }
-        .footer-brand { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
-        .footer-badge { width: 40px; height: 40px; }
-        .footer-logo-img { width: 140px; height: 24px; }
+        .footer-brand { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+        .footer-badge { height: 40px; width: auto; display: block; border-radius: 7px; }
+        .footer-logo-img { height: 20px; width: auto; display: block; }
         .footer-desc { font-size: 0.82rem; color: var(--muted); max-width: 260px; margin-bottom: 10px; }
         .footer-loc { font-family: var(--mono); font-size: 0.66rem; color: var(--faint); }
         .fc h4 { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 1.6px; text-transform: uppercase; color: var(--brass); margin-bottom: 12px; }
@@ -632,6 +637,8 @@
             .service-options { grid-template-columns: repeat(2, 1fr); }
         }
         @media (max-width: 560px) {
+            .logo-badge { height: 38px; }
+            .logo-wordmark { height: 20px; }
             .stages-inner { grid-template-columns: 1fr; }
             .stage { border-right: none; border-bottom: 1px solid var(--border); }
             .foot-inner { grid-template-columns: 1fr; }
@@ -649,9 +656,9 @@
     <nav>
         <div class="nav-inner">
             <a href="#" class="logo-block">
-                <span class="brand-badge logo-badge" aria-hidden="true"></span>
+                <img src="./assets/badge.png" alt="" class="logo-badge" aria-hidden="true">
                 <div class="logo-text">
-                    <span class="brand-logo logo-wordmark" role="img" aria-label="Equonytics"></span>
+                    <img src="./assets/logo.png" alt="Equonytics" class="logo-wordmark">
                     <span class="logo-sub">Help Building & Navigating your Data Streams</span>
                 </div>
             </a>
@@ -1422,8 +1429,8 @@
         <div class="foot-inner">
             <div>
                 <div class="footer-brand">
-                    <span class="brand-badge footer-badge" aria-hidden="true"></span>
-                    <span class="brand-logo footer-logo-img" role="img" aria-label="Equonytics"></span>
+                    <img src="./assets/badge.png" alt="" class="footer-badge" aria-hidden="true">
+                    <img src="./assets/logo.png" alt="Equonytics" class="footer-logo-img">
                 </div>
                 <p class="footer-desc">An independent analytics consultancy helping organizations move from clear reporting to confident decisions.</p>
                 <div class="footer-loc">WORKING WITH CLIENTS EVERYWHERE<br> BASED IN RTP, NC</div>
