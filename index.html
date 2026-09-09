@@ -18,7 +18,9 @@
     <meta name="twitter:title" content="Equonytics | Data Science & Analytics Consulting, Built for Ownership">
     <meta name="twitter:description" content="Equonytics turns scattered data into clear, confident decisions — fractional analytics leadership, dashboards, forecasting, and AI integration, built with your team in as little as 90 days.">
 
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233E7350'/%3E%3Ctext x='32' y='43' font-family='Arial Black,Archivo Black,sans-serif' font-size='24' font-weight='900' fill='%23C79A4E' text-anchor='middle'%3EEQ%3C/text%3E%3C/svg%3E">
+    <!-- FAVICONS: served from your repo instead of inline base64 -->
+    <link rel="icon" type="image/png" href="/assets/favicon.png">
+    <link rel="apple-touch-icon" href="/assets/favicon.png">
 
     <script type="application/ld+json">
     {
@@ -54,6 +56,9 @@
             --sage: #8CAA86;
             --brass: #C79A4E;
             --brass-deep: #A9782F;
+            /* LOGO IMAGES: point these at files in your repo (e.g. GitHub Pages /assets/) */
+            --badge-img: url("/assets/badge.png");
+            --logo-img: url("/assets/logo.svg");
             --heading: 'Archivo Black', 'Archivo', system-ui, sans-serif;
             --sans: 'Inter', system-ui, sans-serif;
             --mono: 'IBM Plex Mono', ui-monospace, monospace;
@@ -173,16 +178,11 @@
             gap: 10px;
         }
         .logo-block { display: flex; align-items: center; gap: 10px; }
-        .logo-monogram {
-            width: 36px; height: 36px;
-            border-radius: 9px;
-            background: var(--forest);
-            display: flex; align-items: center; justify-content: center;
-            flex-shrink: 0;
-        }
-        .logo-monogram span { font-family: var(--heading); font-size: 1rem; font-weight: 600; color: var(--brass); }
-        .logo-text { display: flex; flex-direction: column; line-height: 1.2; }
-        .logo-name { font-family: var(--heading); font-size: 1.24rem; font-weight: 600; letter-spacing: 0; color: var(--brass); }
+        .brand-badge { background-image: var(--badge-img); background-size: contain; background-repeat: no-repeat; background-position: center; display: block; flex-shrink: 0; }
+        .logo-badge { width: 36px; height: 36px; }
+        .logo-text { display: flex; flex-direction: column; line-height: 1.2; gap: 3px; }
+        .brand-logo { background-image: var(--logo-img); background-size: contain; background-repeat: no-repeat; background-position: left center; display: block; }
+        .logo-wordmark { width: 110px; height: 20px; }
         .logo-sub { font-family: var(--mono); font-size: 0.6rem; color: var(--faint); letter-spacing: 0.4px; text-transform: uppercase; }
 
         .nav-links { display: flex; gap: 24px; list-style: none; }
@@ -230,7 +230,8 @@
         .service-selector h2 { text-align: center; margin-bottom: 30px; }
         .service-options {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 1fr;
             gap: 20px;
             list-style: none;
             padding: 0;
@@ -248,6 +249,7 @@
             display: flex;
             flex-direction: column;
             gap: 6px;
+            height: 100%;
         }
         .service-option:hover { border-color: var(--brass); box-shadow: var(--shadow); }
         .service-option.active,
@@ -277,8 +279,6 @@
         .service-option[aria-selected="true"] .option-mark,
         .service-option.active .option-title,
         .service-option[aria-selected="true"] .option-title { color: var(--brass); }
-        .service-option:nth-child(5),
-        .service-option:nth-child(6) { grid-column: 1 / -1; }
 
         /* ---------- TAB PANELS ---------- */
         .tab-panel { display: none; }
@@ -457,6 +457,17 @@
             border-radius: 0 8px 8px 0;
         }
         .field-caption strong { color: var(--cream); font-weight: 600; }
+        .field-outcome {
+            font-size: 0.78rem;
+            color: var(--sage);
+            line-height: 1.65;
+            padding: 12px 16px;
+            margin-top: 10px;
+            border-left: 2px solid var(--forest);
+            background: rgba(62, 115, 80, 0.08);
+            border-radius: 0 8px 8px 0;
+        }
+        .field-outcome strong { color: var(--cream); font-weight: 600; }
         .illustrative-note { font-size: 0.68rem; color: var(--faint); margin-top: 10px; line-height: 1.5; }
         .field-stats {
             display: grid;
@@ -570,6 +581,14 @@
         .cta-form button:hover { background: var(--forest-deep); }
         .cta-note { font-family: var(--mono); font-size: 0.7rem; color: var(--faint); margin-top: 18px; letter-spacing: 0.2px; }
         .cta-confidential { font-size: 0.78rem; color: var(--muted); max-width: 420px; margin: 16px auto 0; line-height: 1.6; }
+        .cta-secondary {
+            max-width: 480px;
+            margin: 32px auto 0;
+            padding-top: 28px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+        }
+        .cta-secondary-text { font-size: 0.85rem; color: var(--muted); line-height: 1.6; margin-bottom: 16px; }
         /* ---------- FOOTER ---------- */
         footer { background: #0A0F0C; padding: 56px 24px 28px; border-top: 1px solid var(--border); }
         .foot-inner {
@@ -577,10 +596,9 @@
             display: grid; grid-template-columns: 1.8fr 1fr 1fr 1fr; gap: 36px;
             padding-bottom: 34px; border-bottom: 1px solid var(--border); margin-bottom: 20px;
         }
-        .footer-wordmark { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
-        .footer-monogram { width: 32px; height: 32px; border-radius: 7px; background: var(--forest); display: flex; align-items: center; justify-content: center; }
-        .footer-monogram span { font-family: var(--heading); font-size: 0.88rem; font-weight: 700; color: var(--brass); }
-        .footer-name { font-family: var(--heading); font-size: 1.1rem; font-weight: 600; color: var(--cream); }
+        .footer-brand { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+        .footer-badge { width: 32px; height: 32px; }
+        .footer-logo-img { width: 99px; height: 18px; }
         .footer-desc { font-size: 0.82rem; color: var(--muted); max-width: 260px; margin-bottom: 10px; }
         .footer-loc { font-family: var(--mono); font-size: 0.66rem; color: var(--faint); }
         .fc h4 { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 1.6px; text-transform: uppercase; color: var(--brass); margin-bottom: 12px; }
@@ -611,8 +629,7 @@
             .svc-grid { grid-template-columns: 1fr; }
             .foot-inner { grid-template-columns: 1fr 1fr; }
             .examples-grid { grid-template-columns: 1fr; }
-            .service-options { grid-template-columns: 1fr; }
-            .service-option:nth-child(5), .service-option:nth-child(6) { grid-column: auto; }
+            .service-options { grid-template-columns: repeat(2, 1fr); }
         }
         @media (max-width: 560px) {
             .stages-inner { grid-template-columns: 1fr; }
@@ -621,6 +638,7 @@
             .cta-box { padding: 40px 24px; }
             .field-stats { grid-template-columns: repeat(2, 1fr); }
             .ps { grid-template-columns: 46px 1fr; gap: 16px; }
+            .service-options { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -631,9 +649,9 @@
     <nav>
         <div class="nav-inner">
             <a href="#" class="logo-block">
-                <div class="logo-monogram"><span>EQ</span></div>
+                <span class="brand-badge logo-badge" aria-hidden="true"></span>
                 <div class="logo-text">
-                    <span class="logo-name">Equonytics</span>
+                    <span class="brand-logo logo-wordmark" role="img" aria-label="Equonytics"></span>
                     <span class="logo-sub">Help Building & Navigating your Data Streams</span>
                 </div>
             </a>
@@ -651,7 +669,7 @@
         <div class="hero-inner">
             <span class="eyebrow">Data & decision consulting</span>
             <h1><strong>The answer</strong> is usually hiding in your data. We help you find it.</h1>
-            <p class="hero-sub">Most mid‑market companies are sitting on more information than they realize. The problem isn’t a lack of data—it’s that no one has connected it to the decisions that actually move the business. We cut through the noise, skip the jargon, and give you a clear read on what happened, why, and what to do next.</p>
+            <p class="hero-sub">Most mid‑market companies are sitting on more information than they realize. The problem isn’t a lack of data— it’s that no one has connected it to the decisions that actually move the business. We cut through the noise, skip the jargon, and give you a clear read on what happened, why, and what to do next.</p>
             <p class="hero-promise"><strong>We deliver the results you need and nothing you don’t.</strong> We embed ownership and self‑sufficiency in your team — not dependency on ours.</p>
             <div class="hero-actions">
                 <a href="#contact" class="btn btn-primary">Request assessment</a>
@@ -956,7 +974,7 @@
                         </div>
 
                         <div class="field-caption">Deals stall hardest between <strong>Proposal and Negotiation</strong> — that's where reps get an automated nudge inside the dashboard, not a monthly recap.</div>
-                        <p class="illustrative-note">Anonymized, illustrative dashboard — not client data. Same build approach: Tableau, Power BI, Looker, or fully custom on Python.</p>
+                        <p class="illustrative-note">Anonymized, illustrative dashboard — not client data. Same build approach: Tableau, Power BI, Looker, or fully custom leveraging a Python backend.</p>
                     </div>
 
                     <!-- DASHBOARD PREVIEW: illustrative marketing ROI & attribution example -->
@@ -1054,7 +1072,7 @@
                         </div>
 
                         <div class="field-caption">Search and email carry the portfolio — cutting <strong>Display's budget in half</strong> would barely move total return, based on marginal ROAS.</div>
-                        <p class="illustrative-note">Anonymized, illustrative dashboard — not client data. Same build approach: Tableau, Power BI, Looker, or fully custom on Python.</p>
+                        <p class="illustrative-note">Anonymized, illustrative dashboard — not client data. Same build approach: Tableau, Power BI, Looker, or fully custom leveraging a Python backend.</p>
                     </div>
 
                     <!-- DASHBOARD PREVIEW: illustrative workforce cost & retention example -->
@@ -1147,7 +1165,7 @@
                         </div>
 
                         <div class="field-caption">R&amp;D's attrition risk is more than <strong>double any other department</strong> — usually the first place we start when retention becomes a budget conversation.</div>
-                        <p class="illustrative-note">Anonymized, illustrative dashboard — not client data. Same build approach: Tableau, Power BI, Looker, or fully custom on Python.</p>
+                        <p class="illustrative-note">Anonymized, illustrative dashboard — not client data. Same build approach: Tableau, Power BI, Looker, or fully custom leveraging a Python backend.</p>
                     </div>
                 </div>
             </section>
@@ -1217,21 +1235,22 @@
         <!-- EXAMPLES OF OUR WORK -->
         <section class="reveal" id="examples">
             <div class="wrap">
-                <span class="eyebrow">Examples of our work</span>
-                <h2>Four interactive examples <strong>straight from the playbook</strong></h2>
-                <p class="lead">Click any card to explore the analysis, chart, and the operating playbook it produced. These are illustrative patterns we commonly see, not named client data.</p>
+                <span class="eyebrow">Specific examples of our work</span>
+                <h2>Four analyses that led to <strong>specific strategic changes</strong></h2>
+                <p class="lead">Each of these started as a plain question — where's the money going, why did this account leave — and ended with a decision the client actually made. Click a card to see the analysis and the change it drove. These are illustrative patterns we commonly see, not named client data.</p>
                 <div class="examples-grid" id="examples-grid">
                     <details class="field-card" id="regression-details">
                         <summary class="field-summary">
                             <span class="eyebrow" style="margin-bottom:10px;">On-time Delivery & Margins</span>
-                            <h3 style="font-size:1.1rem; font-weight:600; margin-bottom:8px; color:var(--cream);">The threshold effect in service levels</h3>
-                            <p style="font-size:0.85rem; color:var(--muted); line-height:1.65; margin-bottom:16px;">A regression on 21,316 orders showing where service improvement actually pays off.</p>
+                            <h3 style="font-size:1.1rem; font-weight:600; margin-bottom:8px; color:var(--cream);">Finding the service level that actually pays for itself</h3>
+                            <p style="font-size:0.85rem; color:var(--muted); line-height:1.65; margin-bottom:16px;">A regression on 21,316 orders that told the client where to stop chasing on-time delivery — and where to start.</p>
                             <span class="expand-cta">View analysis <svg class="chevron" width="11" height="7" viewBox="0 0 11 7" fill="none"><path d="M1 1L5.5 5.5L10 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
                         </summary>
                         <div class="field-card-body">
                             <div class="field-card-label"><span>On-time delivery vs. gross margin lift</span><strong>hover to inspect</strong></div>
                             <div id="regression-chart" class="field-chart-plot"></div>
                             <div class="field-caption">Every <strong>1-point improvement</strong> was associated with a <strong>0.4-point increase in gross margin</strong>, but only after service crossed <strong>92%</strong>.</div>
+                            <div class="field-outcome"><strong>Change made:</strong> the client stopped funding uniform service-level targets network-wide and redirected the budget to push underperforming lanes past 92%, where the margin actually shows up.</div>
                             <div class="field-stats">
                                 <div class="fs"><strong>0.4</strong><span>margin pts per OTD pt</span></div>
                                 <div class="fs"><strong>92%</strong><span>service-level threshold</span></div>
@@ -1252,14 +1271,15 @@
                     <details class="field-card" id="slotting-details">
                         <summary class="field-summary">
                             <span class="eyebrow" style="margin-bottom:10px;">Warehouse Slotting</span>
-                            <h3 style="font-size:1.1rem; font-weight:600; margin-bottom:8px; color:var(--cream);">Cluster-based network analysis for speed</h3>
-                            <p style="font-size:0.85rem; color:var(--muted); line-height:1.65; margin-bottom:16px;">How co-picking patterns reduce travel time and improve slotting.</p>
+                            <h3 style="font-size:1.1rem; font-weight:600; margin-bottom:8px; color:var(--cream);">Regrouping SKUs around how people actually pick</h3>
+                            <p style="font-size:0.85rem; color:var(--muted); line-height:1.65; margin-bottom:16px;">Clustering co-picked items exposed a warehouse layout fighting its own pickers — and got redesigned.</p>
                             <span class="expand-cta">View analysis <svg class="chevron" width="11" height="7" viewBox="0 0 11 7" fill="none"><path d="M1 1L5.5 5.5L10 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
                         </summary>
                         <div class="field-card-body">
                             <div class="field-card-label"><span>SKU clustering by pick frequency & weight</span><strong>hover for details</strong></div>
                             <div id="slotting-chart" class="field-chart-plot"></div>
                             <div class="field-caption">We found <strong>three natural clusters</strong> of items frequently picked together. Moving them closer cut travel time by <strong>18%</strong>.</div>
+                            <div class="field-outcome"><strong>Change made:</strong> the client re-slotted the warehouse around these three clusters instead of the old alphabetical layout, cutting picker travel distance by 22% within one relayout cycle.</div>
                             <div class="field-stats">
                                 <div class="fs"><strong>3</strong><span>clusters identified</span></div>
                                 <div class="fs"><strong>18%</strong><span>faster picking</span></div>
@@ -1271,14 +1291,15 @@
                     <details class="field-card" id="churn-details">
                         <summary class="field-summary">
                             <span class="eyebrow" style="margin-bottom:10px;">Churn Prediction</span>
-                            <h3 style="font-size:1.1rem; font-weight:600; margin-bottom:8px; color:var(--cream);">Who's about to leave, and who's worth saving</h3>
-                            <p style="font-size:0.85rem; color:var(--muted); line-height:1.65; margin-bottom:16px;">A predictive model that flags at-risk accounts early, ranked by value.</p>
+                            <h3 style="font-size:1.1rem; font-weight:600; margin-bottom:8px; color:var(--cream);">Catching the accounts revenue reports miss</h3>
+                            <p style="font-size:0.85rem; color:var(--muted); line-height:1.65; margin-bottom:16px;">A predictive model flagged high-value accounts that looked healthy on paper but were quietly about to leave.</p>
                             <span class="expand-cta">View analysis <svg class="chevron" width="11" height="7" viewBox="0 0 11 7" fill="none"><path d="M1 1L5.5 5.5L10 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
                         </summary>
                         <div class="field-card-body">
                             <div class="field-card-label"><span>Customer value vs. predicted churn probability</span><strong>hover for details</strong></div>
                             <div id="churn-chart" class="field-chart-plot"></div>
                             <div class="field-caption">The model flags accounts that look fine on revenue but have <strong>high churn risk</strong>. At a 0.7 threshold, it captures <strong>74%</strong> of churners.</div>
+                            <div class="field-outcome"><strong>Change made:</strong> the client moved its retention team off a manual "recent complaint" list and onto this model's 0.7-threshold queue, which now drives their weekly save-call priority.</div>
                             <div class="field-stats">
                                 <div class="fs"><strong>0.86</strong><span>AUC score</span></div>
                                 <div class="fs"><strong>74%</strong><span>recall @ 0.7</span></div>
@@ -1290,14 +1311,15 @@
                     <details class="field-card" id="bundle-details">
                         <summary class="field-summary">
                             <span class="eyebrow" style="margin-bottom:10px;">Bundle Suggestion</span>
-                            <h3 style="font-size:1.1rem; font-weight:600; margin-bottom:8px; color:var(--cream);">Bundles that lift order value without cannibalizing margin</h3>
-                            <p style="font-size:0.85rem; color:var(--muted); line-height:1.65; margin-bottom:16px;">Clustering purchase data and price elasticity to design profitable bundles.</p>
+                            <h3 style="font-size:1.1rem; font-weight:600; margin-bottom:8px; color:var(--cream);">Turning purchase patterns into priced bundles</h3>
+                            <p style="font-size:0.85rem; color:var(--muted); line-height:1.65; margin-bottom:16px;">Co-purchase clustering plus elasticity testing became a bundle lineup the merchandising team now runs quarterly.</p>
                             <span class="expand-cta">View analysis <svg class="chevron" width="11" height="7" viewBox="0 0 11 7" fill="none"><path d="M1 1L5.5 5.5L10 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
                         </summary>
                         <div class="field-card-body">
                             <div class="field-card-label"><span>Co-purchase heatmap between product categories</span><strong>hover for joint probability</strong></div>
                             <div id="bundle-chart" class="field-chart-plot"></div>
                             <div class="field-caption">Clustering reveals <strong>natural affinities</strong>. Price elasticity determines the discount. We identified <strong>7 bundles</strong> with a <strong>14% lift</strong> in average order value.</div>
+                            <div class="field-outcome"><strong>Change made:</strong> the merchandising team replaced ad hoc seasonal bundles with these 7 elasticity-priced pairings and now re-runs the analysis every quarter as the product catalog shifts.</div>
                             <div class="field-stats">
                                 <div class="fs"><strong>7</strong><span>bundles identified</span></div>
                                 <div class="fs"><strong>14%</strong><span>expected AOV lift</span></div>
@@ -1385,6 +1407,11 @@
                     </form>
                     <p class="cta-note">hello@equonytics.com</p>
                     <p class="cta-confidential">Whatever you share with us stays between us. We do not use client names, logos, or data as marketing material, on this site or anywhere else.</p>
+
+                    <div class="cta-secondary">
+                        <p class="cta-secondary-text">Looking for something else?</p>
+                        <a href="mailto:Hello@equonytics.com" class="btn btn-secondary">Contact us</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -1394,9 +1421,9 @@
     <footer>
         <div class="foot-inner">
             <div>
-                <div class="footer-wordmark">
-                    <div class="footer-monogram"><span>EQ</span></div>
-                    <span class="footer-name">Equonytics</span>
+                <div class="footer-brand">
+                    <span class="brand-badge footer-badge" aria-hidden="true"></span>
+                    <span class="brand-logo footer-logo-img" role="img" aria-label="Equonytics"></span>
                 </div>
                 <p class="footer-desc">An independent analytics consultancy helping organizations move from clear reporting to confident decisions.</p>
                 <div class="footer-loc">WORKING WITH CLIENTS EVERYWHERE<br> BASED IN RTP, NC</div>
