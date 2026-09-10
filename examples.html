@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of our work | Equonytics</title>
+    <meta name="description" content="Four illustrative analyses from Equonytics engagements — on-time delivery and margin, warehouse slotting, churn prediction, and bundle suggestion — and the specific change each one drove.">
+    <link rel="canonical" href="https://www.equonytics.com/examples.html">
+    <meta name="theme-color" content="#0E1512">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Equonytics">
+    <meta property="og:title" content="Examples of our work | Equonytics">
+    <meta property="og:description" content="Four illustrative analyses from Equonytics engagements — on-time delivery and margin, warehouse slotting, churn prediction, and bundle suggestion — and the specific change each one drove.">
+    <meta property="og:url" content="https://www.equonytics.com/examples.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Examples of our work | Equonytics">
+    <meta name="twitter:description" content="Four illustrative analyses from Equonytics engagements — on-time delivery and margin, warehouse slotting, churn prediction, and bundle suggestion — and the specific change each one drove.">
+
+    <link rel="icon" type="image/png" href="./assets/favicon.png">
+    <link rel="apple-touch-icon" href="./assets/favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <div class="app-shell">
+        <div class="sidenav-scrim" id="sidenavScrim"></div>
+
+        <!-- SECTION NAVIGATION -->
+        <aside class="sidenav" id="sidenav" aria-label="Section navigation">
+            <div class="sidenav-top">
+                <a href="index.html" class="sidenav-logo">
+                    <img src="./assets/logo.png" alt="Equonytics" class="logo-wordmark">
+                    <span class="logo-sub">Building &amp; Navigating your Data Streams</span>
+                </a>
+                <button type="button" class="sidenav-close" id="sidenavClose" aria-label="Close menu">&times;</button>
+            </div>
+            <nav class="sidenav-links" aria-label="Page sections">
+                <a href="index.html#overview" class="sidenav-link">Overview</a>
+                <a href="services.html" class="sidenav-link">Services</a>
+                <a href="examples.html" class="sidenav-link active">Examples</a>
+                <a href="why-us.html" class="sidenav-link">Why us</a>
+                <a href="index.html#process" class="sidenav-link">How we work</a>
+                <a href="index.html#contact" class="sidenav-link">Contact</a>
+            </nav>
+            <div class="sidenav-foot">
+                <a href="index.html#contact" class="btn btn-primary sidenav-cta">Request assessment</a>
+                <span class="sidenav-mail">hello@equonytics.com</span>
+            </div>
+        </aside>
+
+        <div class="main-col">
+            <!-- MOBILE TOPBAR -->
+            <header class="topbar">
+                <button type="button" class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="sidenav">
+                    <span></span><span></span><span></span>
+                </button>
+                <img src="./assets/logo.png" alt="Equonytics" class="logo-wordmark">
+                <a href="index.html#contact" class="nav-cta">Request assessment</a>
+            </header>
+
+            <!-- PAGE HEADER -->
+            <header class="page-header">
+                <div class="wrap page-header-inner">
+                    <div class="breadcrumb"><a href="index.html">Home</a> / Examples</div>
+                    <span class="eyebrow">Specific examples of our work</span>
+                    <h1>Four analyses that led to specific strategic changes</h1>
+                    <p class="lead">Each of these started as a plain question: where's the money going? Why did this account leave? The resulting analyses yielded decisions the client actually made. Click a card to see the analysis and the change it drove. These are illustrative patterns we commonly see, not named client data.</p>
+                </div>
+            </header>
+
+            <main id="main-content">
+<section class="reveal" id="examples">
+            <div class="wrap">
+                <div class="examples-grid" id="examples-grid">
+                    <details class="field-card" id="regression-details">
+                        <summary class="field-summary">
+                            <span class="eyebrow" style="margin-bottom:10px;">On-time Delivery & Margins</span>
+                            <h3 style="font-size:1.1rem; font-weight:600; margin-bottom:8px; color:var(--cream);">Finding the service level that actually pays for itself</h3>
+                            <p style="font-size:0.85rem; color:var(--muted); line-height:1.65; margin-bottom:16px;">A regression on 21,316 orders that told the client where to stop chasing on-time delivery and where to reconfigure their focus.</p>
+                            <span class="expand-cta">View analysis <svg class="chevron" width="11" height="7" viewBox="0 0 11 7" fill="none"><path d="M1 1L5.5 5.5L10 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                        </summary>
+                        <div class="field-card-body">
+                            <div class="field-card-label"><span>On-time delivery vs. gross margin lift</span><strong>hover to inspect</strong></div>
+                            <div id="regression-chart" class="field-chart-plot"></div>
+                            <div class="field-caption">Every <strong>1-point improvement</strong> was associated with a <strong>0.4-point increase in gross margin</strong>, but only after service crossed <strong>92%</strong>.</div>
+                            <div class="field-outcome"><strong>Change made:</strong> the client stopped funding uniform service-level targets network-wide and redirected the budget to push underperforming lanes past 92%, where the margin actually shows up.</div>
+                            <div class="field-stats">
+                                <div class="fs"><strong>0.4</strong><span>margin pts per OTD pt</span></div>
+                                <div class="fs"><strong>92%</strong><span>service-level threshold</span></div>
+                                <div class="fs"><strong>0.81</strong><span>model R²</span></div>
+                                <div class="fs"><strong>21,316</strong><span>orders analyzed</span></div>
+                            </div>
+                            <div class="playbook-inner">
+                                <span class="eyebrow">Reading the regression</span>
+                                <h3 style="margin:10px 0;">A metric only earns its keep if it has the capacity to change your strategy.</h3>
+                                <div class="svc-grid" style="margin-top:20px;">
+                                    <div class="svc"><span class="svc-mark">Below 92%</span><h4 style="font-size:1.1rem;">Fix the floor</h4><p>Stop spreading effort evenly.</p></div>
+                                    <div class="svc"><span class="svc-mark">Above 92%</span><h4 style="font-size:1.1rem;">Harvest the premium</h4><p>Put capital into lanes above the line.</p></div>
+                                </div>
+                                <div class="warning-box"><span class="eyebrow">The marginal-ROI trap</span><p>Do not apply the 0.4 multiplier across the whole network.</p></div>
+                            </div>
+                        </div>
+                    </details>
+                    <details class="field-card" id="slotting-details">
+                        <summary class="field-summary">
+                            <span class="eyebrow" style="margin-bottom:10px;">Warehouse Slotting</span>
+                            <h3 style="font-size:1.1rem; font-weight:600; margin-bottom:8px; color:var(--cream);">Regrouping SKUs around how warehouse workers actually pick</h3>
+                            <p style="font-size:0.85rem; color:var(--muted); line-height:1.65; margin-bottom:16px;">Clustering co-picked items exposed a warehouse layout fighting its own pickers. This analysis resulted in a redesign of their slotting & picking practices.</p>
+                            <span class="expand-cta">View analysis <svg class="chevron" width="11" height="7" viewBox="0 0 11 7" fill="none"><path d="M1 1L5.5 5.5L10 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                        </summary>
+                        <div class="field-card-body">
+                            <div class="field-card-label"><span>SKU clustering by pick frequency & weight</span><strong>hover for details</strong></div>
+                            <div id="slotting-chart" class="field-chart-plot"></div>
+                            <div class="field-caption">We found <strong>three natural clusters</strong> of items frequently picked together. Moving them closer cut travel time by <strong>18%</strong>.</div>
+                            <div class="field-outcome"><strong>Change made:</strong> the client re-slotted the warehouse around these three clusters instead of the old alphabetical layout, cutting picker travel distance by 22% within one relayout cycle.</div>
+                            <div class="field-stats">
+                                <div class="fs"><strong>3</strong><span>clusters identified</span></div>
+                                <div class="fs"><strong>18%</strong><span>faster picking</span></div>
+                                <div class="fs"><strong>22%</strong><span>less travel distance</span></div>
+                                <div class="fs"><strong>4,112</strong><span>SKUs analyzed</span></div>
+                            </div>
+                        </div>
+                    </details>
+                    <details class="field-card" id="churn-details">
+                        <summary class="field-summary">
+                            <span class="eyebrow" style="margin-bottom:10px;">Churn Prediction</span>
+                            <h3 style="font-size:1.1rem; font-weight:600; margin-bottom:8px; color:var(--cream);">Catching the accounts revenue reports miss</h3>
+                            <p style="font-size:0.85rem; color:var(--muted); line-height:1.65; margin-bottom:16px;">A predictive model flagged high-value accounts that looked healthy on paper but were quietly about to leave.</p>
+                            <span class="expand-cta">View analysis <svg class="chevron" width="11" height="7" viewBox="0 0 11 7" fill="none"><path d="M1 1L5.5 5.5L10 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                        </summary>
+                        <div class="field-card-body">
+                            <div class="field-card-label"><span>Customer value vs. predicted churn probability</span><strong>hover for details</strong></div>
+                            <div id="churn-chart" class="field-chart-plot"></div>
+                            <div class="field-caption">The model flags accounts that look fine on revenue but have <strong>high churn risk</strong>. At a 0.7 threshold, it captures <strong>74%</strong> of churners.</div>
+                            <div class="field-outcome"><strong>Change made:</strong> the client moved its retention team off a manual "recent complaint" list and onto this model's 0.7-threshold queue, which now drives their weekly save-call priority.</div>
+                            <div class="field-stats">
+                                <div class="fs"><strong>0.86</strong><span>AUC score</span></div>
+                                <div class="fs"><strong>74%</strong><span>recall @ 0.7</span></div>
+                                <div class="fs"><strong>3.2x</strong><span>retention ROI</span></div>
+                                <div class="fs"><strong>1,847</strong><span>accounts scored</span></div>
+                            </div>
+                        </div>
+                    </details>
+                    <details class="field-card" id="bundle-details">
+                        <summary class="field-summary">
+                            <span class="eyebrow" style="margin-bottom:10px;">Bundle Suggestion</span>
+                            <h3 style="font-size:1.1rem; font-weight:600; margin-bottom:8px; color:var(--cream);">Turning purchase patterns into priced bundles</h3>
+                            <p style="font-size:0.85rem; color:var(--muted); line-height:1.65; margin-bottom:16px;">Co-purchase clustering plus elasticity testing became a bundle lineup the merchandising team now runs quarterly.</p>
+                            <span class="expand-cta">View analysis <svg class="chevron" width="11" height="7" viewBox="0 0 11 7" fill="none"><path d="M1 1L5.5 5.5L10 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                        </summary>
+                        <div class="field-card-body">
+                            <div class="field-card-label"><span>Co-purchase heatmap between product categories</span><strong>hover for joint probability</strong></div>
+                            <div id="bundle-chart" class="field-chart-plot"></div>
+                            <div class="field-caption">Clustering reveals <strong>natural affinities</strong>. Price elasticity determines the discount. We identified <strong>7 bundles</strong> with a <strong>14% lift</strong> in average order value.</div>
+                            <div class="field-outcome"><strong>Change made:</strong> the merchandising team replaced ad hoc seasonal bundles with these 7 elasticity-priced pairings and now re-runs the analysis every quarter as the product catalog shifts.</div>
+                            <div class="field-stats">
+                                <div class="fs"><strong>7</strong><span>bundles identified</span></div>
+                                <div class="fs"><strong>14%</strong><span>expected AOV lift</span></div>
+                                <div class="fs"><strong>-1.2 to -2.1</strong><span>elasticity range</span></div>
+                                <div class="fs"><strong>31,502</strong><span>transactions analyzed</span></div>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+            </main>
+
+            <!-- CTA BAND -->
+            <section class="reveal">
+                <div class="wrap">
+                    <div class="cta-band">
+                        <div>
+                            <h2>Want to know what this looks like in your data?</h2>
+                            <p>A free 60-minute assessment will tell you where to start.</p>
+                        </div>
+                        <a href="index.html#contact" class="btn btn-primary">Request assessment</a>
+                    </div>
+                </div>
+            </section>
+
+<footer>
+        <div class="foot-inner">
+            <div>
+                <div class="footer-brand">
+                    <img src="./assets/logo.png" alt="Equonytics" class="footer-logo-img">
+                </div>
+                <p class="footer-desc">An independent analytics consultancy helping organizations move from clear reporting to confident decisions.</p>
+                <div class="footer-loc">WORKING WITH CLIENTS EVERYWHERE<br> BASED IN RTP, NC</div>
+            </div>
+            <div class="fc">
+                <h4>What we help with</h4>
+                <ul>
+                    <li><a href="services.html#tab-fractional">Fractional Leadership</a></li>
+                    <li><a href="services.html#tab-dashboarding">Dashboarding & Reporting</a></li>
+                    <li><a href="services.html#tab-assessment">Analytics Maturity Assessment</a></li>
+                    <li><a href="services.html#tab-change">Change Management</a></li>
+                    <li><a href="services.html#tab-forecasting">Forecasting Modelling</a></li>
+                    <li><a href="services.html#tab-ai">AI Business Process Integration</a></li>
+                </ul>
+            </div>
+            <div class="fc">
+                <h4>How we work</h4>
+                <ul>
+                    <li><a href="index.html#contact">Discovery call</a></li>
+                    <li><a href="index.html#contact">Maturity assessment</a></li>
+                    <li><a href="index.html#contact">Sprint delivery</a></li>
+                    <li><a href="index.html#contact">Transfer & advance</a></li>
+                </ul>
+            </div>
+            <div class="fc">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#main-content">Our work</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="foot-bottom">
+            <span>© 2026 Equonytics LLC · All rights reserved</span>
+            <a href="#" class="back-to-top">Back to top ↑</a>
+            <span>hello@equonytics.com</span>
+        </div>
+    </footer>
+        </div> <!-- /main-col -->
+    </div> <!-- /app-shell -->
+
+    <script src="https://cdn.plot.ly/plotly-2.32.0.min.js" charset="utf-8"></script>
+    <script src="./assets/app.js"></script>
+    <script src="./assets/examples.js"></script>
+</body>
+</html>
